@@ -21,9 +21,11 @@ li {
   text-align: left;
   margin: 0;
   padding: 0;
-  text-transform: capitalize;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
