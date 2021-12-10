@@ -21,6 +21,36 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thurs", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                    <div class="col-2">
+                      <div class="weather-forecast-date">
+                      ${day}</div>
+                      <img
+                      src="https://openweathermap.org/img/wn/03d@2x.png" alt
+                      ="forecast" width ="36">
+                      <div class="weather-forecast-hilo">
+                        <span class="weather-forecast-hilo-hi">
+                          12
+                        </span>
+                        <span class="weather-forecast-hilo-lo">
+                          3
+                        </span>
+                      </div>
+              </div>
+                `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -86,3 +116,4 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("Prestwick");
+displayForecast();

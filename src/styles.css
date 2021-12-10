@@ -71,3 +71,19 @@ strong {
 .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+}
+
+.weather-forecast-date {
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+.weather-forecast-hilo {
+  font-size: 14px;
+  color: rgb(135, 135, 135);
+}
