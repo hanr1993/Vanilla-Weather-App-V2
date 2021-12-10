@@ -136,4 +136,4 @@ form.addEventListener("submit", handleSubmit);
 let current = document.querySelector("#current-location");
 current.addEventListener("click", currentLocation);
 
-search(currentLocation);
+search("Glasgow");
