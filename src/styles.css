@@ -1,7 +1,12 @@
+body {
+  background-color: #cceaec;
+  font-family: "poppins", sans-serif;
+}
+
 h1 {
-  color: rgb(135, 135, 135);
+  color: rgb(33, 33, 33);
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 60px;
   line-height: 28px;
   margin-bottom: 0;
@@ -9,11 +14,12 @@ h1 {
 ul {
   padding: 0;
   margin: 0;
+  font-size: 15px;
 }
 
 li {
   list-style: none;
-  color: rgb(0, 0, 0);
+  color: rgb(135, 135, 135);
   font-family: "poppins", sans-serif;
   font-size: 20px;
   font-weight: 60px;
@@ -62,20 +68,11 @@ strong {
   top: -25px;
 }
 
-.active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-}
-
 .weather-forecast {
   margin-top: 30px;
   text-align: center;
   color: black;
+  font-size: 17px;
 }
 
 .weather-forecast-date {
@@ -86,4 +83,22 @@ strong {
 .weather-forecast-hilo {
   font-size: 14px;
   color: rgb(135, 135, 135);
+}
+
+.search {
+  background-color: transparent;
+  border: white;
+  border-radius: round;
+  font-size: 20px;
+}
+
+.current-location {
+  background-color: transparent;
+  border: white;
+  border-radius: round;
+  font-size: 20px;
+}
+
+background {
+  background-color: #ddf3f5;
 }

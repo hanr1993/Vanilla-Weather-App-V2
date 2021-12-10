@@ -117,9 +117,24 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-let celciusTemperature = null;
+function showCurrent(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "e163a366c5f378959c62d92129e929b6";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function currentLocation(event) {
+  navigator.geolocation.getCurrentPosition(showCurrent);
+}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Prestwick");
+let current = document.querySelector("#current-location");
+current.addEventListener("click", currentLocation);
+
+search("Glasgow");
