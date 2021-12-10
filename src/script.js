@@ -57,7 +57,7 @@ function displayForecast(response) {
                       ="forecast" width ="36">
                       <div class="weather-forecast-hilo">
                         <span class="weather-forecast-hilo-hi">
-                          ${Math.round(forecastDay.temp.max)}°|
+                          ${Math.round(forecastDay.temp.max)}° |
                         </span>
                         <span class="weather-forecast-hilo-lo">
                            ${Math.round(forecastDay.temp.min)}°
@@ -117,32 +117,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFarenheitTemperature(event) {
-  event.preventDefault();
-  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  celciusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
 let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", displayFarenheitTemperature);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("Prestwick");
