@@ -79,7 +79,6 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let conditionElement = document.querySelector("#condition");
@@ -137,4 +136,4 @@ form.addEventListener("submit", handleSubmit);
 let current = document.querySelector("#current-location");
 current.addEventListener("click", currentLocation);
 
-search("Glasgow");
+search(currentLocation);
